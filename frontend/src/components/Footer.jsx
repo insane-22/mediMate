@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="footer">
+    <div className="footer">
       <div className="box-container">
         <div className="box">
           <h3>Quick Links</h3>
@@ -43,7 +43,7 @@ const Footer = () => {
           <Link to=""><i><FaPinterest /></i>Pinterest</Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

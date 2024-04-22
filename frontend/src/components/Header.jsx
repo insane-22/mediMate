@@ -1,25 +1,45 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaHeartbeat } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { useAuth } from "../context/auth";
+import Swal from "sweetalert2";
 
 const Header = () => {
-    const [isActive, setIsActive] = useState(false);
+  const [auth, setAuth] = useAuth();
+  const [isActive, setIsActive] = useState(false);
 
-    const toggleMenu = () => {
-      setIsActive(!isActive);
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsActive(false);
     };
 
-    useEffect(() => {
-      const handleScroll = () => {
-        setIsActive(false);
-      };
+    window.addEventListener("scroll", handleScroll);
 
-      window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
+  const handleLogout = () => {
+    setAuth({
+      ...auth,
+      user: null,
+      token: "",
+    });
+    localStorage.removeItem("auth");
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Logout Succesful!",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+    });
+  };
 
   return (
     <>
@@ -33,28 +53,32 @@ const Header = () => {
           </Link>
         </div>
         <nav className={`navbar ${isActive ? "active" : ""}`}>
-          <NavLink className="nav-link" to="/about">
+          <NavLink className="nav-link" to="/">
             Home
           </NavLink>
           <NavLink className="nav-link" to="/about">
             About
           </NavLink>
-          <NavLink className="nav-link" to="/about">
-            Register
-          </NavLink>
-          <NavLink className="nav-link" to="/about">
-            Login
-          </NavLink>
 
-          <NavLink className="nav-link" to="/about">
-            Dashboard
-          </NavLink>
-          <NavLink className="nav-link" to="/about">
-            Logout
-          </NavLink>
-          <NavLink className="nav-link" to="/about">
-            Logout
-          </NavLink>
+          {!auth.user ? (
+            <>
+              <NavLink className="nav-link" to="/register">
+                Register
+              </NavLink>
+              <NavLink className="nav-link" to="/login">
+                Login
+              </NavLink>
+            </>
+          ) : (
+            <>
+              <NavLink className="nav-link" to="/about">
+                Dashboard
+              </NavLink>
+              <NavLink className="nav-link" to="/login" onClick={handleLogout}>
+                Logout
+              </NavLink>
+            </>
+          )}
         </nav>
         <div id="menu-btn" onClick={toggleMenu}>
           <FaBars />

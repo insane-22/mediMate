@@ -2,6 +2,21 @@ section {
   padding: 2rem 9%;
 }
 
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color:var(--green);
+}
+
 .header {
   padding: 2rem 9%;
   /* position: fixed; */
@@ -134,6 +149,64 @@ section {
   color: #111;
 }
 
+.review .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2rem;
+}
+
+.review .box-container .box {
+  border: 0.2rem solid #16a085;
+  box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  background: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.review .box-container .box img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.5rem solid #fff;
+}
+
+.review .box-container .box h3 {
+  color: #fff;
+  font-size: 2.2rem;
+  padding: 0.5rem 0;
+}
+
+.review .box-container .box .stars i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.review .box-container .box .text {
+  color: #111;
+  line-height: 1.8;
+  font-size: 1.6rem;
+  padding-top: 4rem;
+}
+
+.review .box-container .box::before {
+  content: "";
+  position: absolute;
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #16a085;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 25rem;
+  width: 120%;
+  z-index: -1;
+}
+
 .footer .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
@@ -141,25 +214,21 @@ section {
   color: white;
   padding: 25px;
   background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); 
+  background: -webkit-linear-gradient(to right, #434343, #000000);
   background: linear-gradient(to right, #434343, #000000);
 }
 
 .footer .box-container .box h3 {
   font-size: 2.5rem;
   /* color: #444; */
-  padding: 1rem 0;
+  padding: 1rem 2rem;
 }
 
 .footer .box-container .box a {
   display: block;
   font-size: 1rem;
   color: #fff;
-  padding: 0.2rem 0;
+  padding: 0.2rem 2rem;
 }
 
 .footer .box-container .box a i {

@@ -1,0 +1,32 @@
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.row .image {
+  flex: 1 1 45rem;
+}
+
+.row .image img {
+  width: 100%;
+}
+
+.row .content {
+  flex: 1 1 45rem;
+}
+
+.row .content h3 {
+  color: #444;
+  text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+.row .content p {
+  color: #111;
+  padding: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}

@@ -1,0 +1,53 @@
+.row {
+    margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.row .image {
+  flex: 1 1 20rem;
+}
+
+.row .image img {
+  width: 100%;
+}
+
+.row form {
+    margin-right: 200px;
+  flex: 1 1 45rem;
+  background: #fff;
+  border: 0.2rem solid #16a085;
+  box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+/* .row form{
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  font-size: 1.7rem;
+  text-align: center;
+} */
+.row form h3 {
+  color: #444;
+  padding-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.row form .box {
+  width: 80%;
+  margin: 0.7rem 0;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #16a085;
+  font-size: 1.6rem;
+  color: #444;
+  text-transform: none;
+  padding: 1rem;
+}
+
+.row form .btn {
+  padding: 1rem 4rem;
+}

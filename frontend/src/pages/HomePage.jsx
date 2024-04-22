@@ -1,8 +1,15 @@
-import { FaHospital, FaUser, FaUsers } from "react-icons/fa";
+import { FaHospital, FaStar, FaStarHalf, FaUser, FaUsers } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import Layout from "../components/Layout";
+import { useNavigate } from "react-router-dom"; 
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleClick = ()=>{
+    navigate("/register")
+  }
+
   return (
     <Layout>
       <section className="home">
@@ -22,7 +29,7 @@ const HomePage = () => {
             consequatur, autem enim quas esse? Doloribus similique commodi eum.
             Delectus
           </p>
-          <button className="btn">Let us get started</button>
+          <button className="btn" onClick={handleClick}>Sign Up for BEST Experience</button>
         </div>
       </section>
 
@@ -54,6 +61,67 @@ const HomePage = () => {
           </i>
           <h3>50+</h3>
           <p>hospitals connected</p>
+        </div>
+      </section>
+
+      <section className="review" id="review">
+        <h1 className="heading">
+          {" "}
+          clients <span>review</span>{" "}
+        </h1>
+
+        <div className="box-container">
+          <div className="box">
+            <img src="image/pic-1.jpg" alt="" />
+            <h3>win coder</h3>
+            <div className="stars">
+              <i><FaStar /></i>
+              <i><FaStar /></i>
+              <i><FaStar /></i>
+              <i><FaStar /></i>
+            </div>
+            <p className="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid
+              perspiciatis libero nobis rem numquam nesciunt alias sapiente
+              minus voluptatem, reiciendis consequuntur optio dolorem!
+            </p>
+          </div>
+
+          <div className="box">
+            <img src="image/pic-1.jpg" alt="" />
+            <h3>win coder</h3>
+            <div className="stars">
+              <i><FaStar /></i>
+              <i><FaStar /></i>
+              <i><FaStar /></i>
+              <i><FaStar /></i>
+              <i><FaStarHalf /></i>
+            </div>
+            <p className="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid
+              perspiciatis libero nobis rem numquam nesciunt alias sapiente
+              minus voluptatem, reiciendis consequuntur optio dolorem!
+            </p>
+          </div>
+
+          <div className="box">
+            <img src="image/pic-1.jpg" alt="" />
+            <h3>win coder</h3>
+            <div className="stars">
+              <i><FaStar /></i>
+              <i><FaStar /></i>
+              <i><FaStar /></i>
+              <i><FaStarHalf /></i>
+            </div>
+            <p className="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid
+              perspiciatis libero nobis rem numquam nesciunt alias sapiente
+              minus voluptatem, reiciendis consequuntur optio dolorem!
+            </p>
+          </div>
         </div>
       </section>
     </Layout>

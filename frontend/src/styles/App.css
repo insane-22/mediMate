@@ -1,0 +1,240 @@
+section {
+  padding: 2rem 9%;
+}
+
+.header {
+  padding: 2rem 9%;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.header .logo {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #444;
+}
+
+.header .logo i {
+  margin: 30px;
+  color: #16a085;
+}
+
+.header .navbar a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #111;
+  margin-left: 2rem;
+}
+.header .navbar a:hover {
+  color: #16a085;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  border-radius: 0.5rem;
+  background: #eee;
+  color: #16a085;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 10rem;
+}
+
+.home .image {
+  flex: 1 1 25rem;
+}
+
+.home .image img {
+  width: 100%;
+}
+
+.home .content {
+  flex: 1 1 45rem;
+}
+
+.home .content h3 {
+  font-size: 4.5rem;
+  color: #444;
+  line-height: 1.8;
+  text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.home .content p {
+  /* font-size: 1.7rem; */
+  color: #111;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  border: 0.2rem solid #16a085;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  color: #16a085;
+  cursor: pointer;
+  font-size: 1.7rem;
+  background: #fff;
+}
+
+.btn:hover {
+  background: #16a085;
+  color: #fff;
+}
+
+.icons-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.icons-container .icon {
+  border: 0.2rem solid #16a085;
+  box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.icons-container .icon i {
+  font-size: 4.5rem;
+  color: #16a085;
+  padding-bottom: 0.7rem;
+}
+
+.icons-container .icon h3 {
+  font-size: 4.5rem;
+  color: #444;
+  padding: 0.5rem 0;
+  text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.icons-container .icon p {
+  font-size: 1.7rem;
+  color: #111;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2rem;
+  color: white;
+  padding: 25px;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); 
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  /* color: #444; */
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.2rem 0;
+}
+
+.footer .box-container .box a i {
+  padding-right: 0.5rem;
+  color: #16a085;
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+.footer .credit {
+  padding: 1rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #111;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.footer .credit span {
+  color: #16a085;
+}
+
+/* media queries  */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: initial;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+    width: 30rem;
+    border: 0.2rem solid #16a085;
+    background: #fff;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: top right;
+    transition: none;
+  }
+
+  .header .navbar.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: 0.2s ease-out;
+  }
+
+  .header .navbar a {
+    font-size: 2rem;
+    display: block;
+    margin: 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}

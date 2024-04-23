@@ -1,14 +1,26 @@
-import { FaHospital, FaStar, FaStarHalf, FaUser, FaUsers } from "react-icons/fa";
+import {
+  FaHospital,
+  FaStar,
+  FaStarHalf,
+  FaUser,
+  FaUsers,
+} from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import Layout from "../components/Layout";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/auth";
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const [auth] = useAuth();
 
-  const handleClick = ()=>{
-    navigate("/register")
-  }
+  const handleClick = () => {
+    navigate("/register");
+  };
+
+  const handleClick2 = () => {
+    navigate("/about");
+  };
 
   return (
     <Layout>
@@ -29,7 +41,17 @@ const HomePage = () => {
             consequatur, autem enim quas esse? Doloribus similique commodi eum.
             Delectus
           </p>
-          <button className="btn" onClick={handleClick}>Sign Up for BEST Experience</button>
+          {!auth.user ? (
+            <button className="btn" onClick={handleClick}>
+              Sign Up for BEST Experience
+            </button>
+          ) : (
+            <>
+              <button className="btn" onClick={handleClick2}>
+                Explore!
+              </button>
+            </>
+          )}
         </div>
       </section>
 
@@ -75,10 +97,18 @@ const HomePage = () => {
             <img src="image/pic-1.jpg" alt="" />
             <h3>win coder</h3>
             <div className="stars">
-              <i><FaStar /></i>
-              <i><FaStar /></i>
-              <i><FaStar /></i>
-              <i><FaStar /></i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStar />
+              </i>
             </div>
             <p className="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -92,11 +122,21 @@ const HomePage = () => {
             <img src="image/pic-1.jpg" alt="" />
             <h3>win coder</h3>
             <div className="stars">
-              <i><FaStar /></i>
-              <i><FaStar /></i>
-              <i><FaStar /></i>
-              <i><FaStar /></i>
-              <i><FaStarHalf /></i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStarHalf />
+              </i>
             </div>
             <p className="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -110,10 +150,18 @@ const HomePage = () => {
             <img src="image/pic-1.jpg" alt="" />
             <h3>win coder</h3>
             <div className="stars">
-              <i><FaStar /></i>
-              <i><FaStar /></i>
-              <i><FaStar /></i>
-              <i><FaStarHalf /></i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStar />
+              </i>
+              <i>
+                <FaStarHalf />
+              </i>
             </div>
             <p className="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

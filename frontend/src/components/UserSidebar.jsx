@@ -1,4 +1,4 @@
-import { FaHeartbeat } from "react-icons/fa";
+import { FaDisease, FaHeartbeat } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { BiHome  } from "react-icons/bi";
 
@@ -14,14 +14,14 @@ const UserSidebar = () => {
         <NavLink
           to="/dashboard/user/profile"
           className="item"
-          activeClassName="active"
+          activeclassname="active"
         >
           <BiHome className="logo-menu" />
           Profile
         </NavLink>
-        <NavLink to="/" className="item">
-          <BiHome className="logo-menu" />
-          Dashboard
+        <NavLink to="/dashboard/user/diagnose   " className="item">
+          <FaDisease className="logo-menu" />
+          Diagnose
         </NavLink>
         <NavLink to="/" className="item">
           <BiHome className="logo-menu" />

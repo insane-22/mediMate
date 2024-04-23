@@ -28,22 +28,31 @@ def index():
 def get_symptoms():
     return jsonify({'symptoms': symptoms})
 
-@app.route('/update', methods=['POST'])
+@app.route('/diagnose', methods=['POST'])
 def update():
     global selected_symptoms
     selected_symptoms = [0] * 17
-    selected_indices = [symptom_weights[symptom] for symptom in request.form.getlist('symptoms')]
+    i=0
+    selected_indices = [symptom_weights[symptom] for symptom in request.json]
     for weight in selected_indices:
-        selected_symptoms[weight - 1] = weight
-    return 'Array updated successfully'
+        selected_symptoms[i] = weight
+        i+=1
+    return selected_symptoms
+
+@app.route('/test', methods=['POST'])
+def post_symptoms():
+    global selected_symptoms
+    selected_symptoms = [0] * 17
+    selected_indices = [symptom_weights[symptom] for symptom in request.json]
+    return selected_indices
 
 @app.route('/get_selection', methods=['GET'])
 def get_selection():
     return jsonify(selected_symptoms)
 
-@app.route('/hi')
+@app.route('/final', methods=['POST'])
 def find():
-    result = loaded_model.predict([[3, 5, 3, 5, 4, 4, 3, 1,0, 0, 0, 0, 0, 0, 0, 0, 0]])
+    result = loaded_model.predict([request.json])
     return result[0]
 
 app.run(host='0.0.0.0', port=5000, debug=True)

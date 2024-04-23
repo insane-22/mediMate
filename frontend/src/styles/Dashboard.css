@@ -1,0 +1,89 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    height: 95vh;
+}
+
+.logoo{
+    text-align: center;
+    padding: 20px;
+    color: #dde6ed;
+    display: flex;
+    gap: 20px;
+}
+
+.logo-menu-icon {
+    font-size: 1.4rem;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-list .item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+    border: 10px;
+    transition: 0.3s ease-in-out;
+    color: #27374d;
+}
+
+.menu-list .item.active,
+.menu-list .item:hover {
+    background: #27374d;
+    color: #dde6ed;
+}
+
+.dashboard{
+    display: flex;
+    gap: 20px;
+    /* background: #bbecdb; */
+    background: #dde6ed;
+    padding: 20px;
+}
+
+.dashboard-content{
+    background: #fff;
+    flex: 1;
+    /* flex-direction: column; */
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.dash{
+    display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* .content-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.header-title{
+    color: #526d82;
+}
+
+img {
+  height: 40rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.5rem solid #fff;
+}
+
+.content {
+  flex: 1 1 45rem;
+  padding: 3px;
+}

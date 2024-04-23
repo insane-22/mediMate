@@ -71,8 +71,17 @@ const Header = () => {
             </>
           ) : (
             <>
-              <NavLink className="nav-link" to="/about">
-                Dashboard
+              <NavLink
+                className="nav-link"
+                to={`/dashboard/${
+                  auth?.user?.hierarchyRole === 1
+                    ? "admin"
+                    : auth?.user?.role === "User"
+                    ? "user"
+                    : "doctor"
+                }`}
+              >
+                {auth?.user?.name}
               </NavLink>
               <NavLink className="nav-link" to="/login" onClick={handleLogout}>
                 Logout

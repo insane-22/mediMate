@@ -2,19 +2,19 @@ section {
   padding: 2rem 9%;
 }
 
-.heading{
-    text-align: center;
-    padding-bottom: 2rem;
-    text-shadow: var(--text-shadow);
-    text-transform: uppercase;
-    color:var(--black);
-    font-size: 5rem;
-    letter-spacing: .4rem;
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  color: #111;
+  font-size: 5rem;
+  letter-spacing: 0.4rem;
 }
 
-.heading span{
-    text-transform: uppercase;
-    color:var(--green);
+.heading span {
+  text-transform: uppercase;
+  color: #16a085;
 }
 
 .header {
@@ -252,6 +252,14 @@ section {
 
 .footer .credit span {
   color: #16a085;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: "100vh";
 }
 
 /* media queries  */

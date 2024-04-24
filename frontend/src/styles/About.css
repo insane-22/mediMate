@@ -25,6 +25,7 @@
 }
 
 .row .content p {
+  margin: 20px;
   color: #111;
   padding: 1rem 0;
   font-size: 1rem;

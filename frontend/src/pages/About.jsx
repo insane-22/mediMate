@@ -11,18 +11,26 @@ const About = () => {
         <div className="content">
           <h3>We take care of your healthy life!</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ad
-            enim iure culpa distinctio. Nemo similique natus laudantium
-            quibusdam voluptatem! Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Harum nam a culpa quidem quo autem quis dolores
-            earum mollitia minima?
+            At MediMate, we are on a mission to revolutionize the way people
+            access healthcare. Founded by a team of passionate healthcare
+            enthusiasts, our goal is simple: to make quality healthcare
+            accessible to everyone, everywhere. We believe that no one should
+            have to wait weeks for a doctors appointment or struggle to find a
+            specialist who understands their unique needs. With MediMate, we are
+            bridging the gap between patients and healthcare providers,
+            empowering individuals to take control of their health with ease and
+            confidence.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ad
-            enim iure culpa distinctio. Nemo similique natus laudantium
-            quibusdam voluptatem! Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Harum nam a culpa quidem quo autem quis dolores
-            earum mollitia minima?
+            Our team is driven by a shared vision of a future where healthcare
+            is not only efficient and effective but also compassionate and
+            personalized. Were committed to leveraging the latest technology
+            and best practices to ensure that every interaction with MediMate is
+            seamless and stress-free. Whether you are seeking advice for a minor
+            ailment or managing a chronic condition, you can trust that MediMate
+            will be there for you every step of the way. Join us on this journey
+            towards better health, and together, let us make healthcare more
+            accessible, more affordable, and more human.
           </p>
         </div>
       </div>

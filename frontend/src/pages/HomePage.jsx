@@ -32,14 +32,14 @@ const HomePage = () => {
         <div className="content">
           <h3>Stay safe, stay healthy</h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et quo
-            temporibus perferendis quae accusantium voluptatibus ducimus
-            tenetur. Incidunt error magnam quos, odit deserunt sunt nihil velit
-            excepturi aliquam hic esse dolore dolorem vel asperiores sint dicta
-            nesciunt iure quidem, facilis natus eveniet facere at? Pariatur
-            commodi sit mollitia cumsam fuga eius earum odio similique ratione
-            consequatur, autem enim quas esse? Doloribus similique commodi eum.
-            Delectus
+            Welcome to MediMate, your trusted health companion! Whether you are
+            feeling under the weather or simply seeking guidance on your health
+            journey, we are here to help .We analyze your symptoms and connect
+            you with the perfect doctor, ensuring personalized care tailored to
+            your needs. Say goodbye to endless searching and let MediMate be
+            your guiding light towards better health. Get started today and
+            experience the future of healthcare, where compassion meets
+            innovation.
           </p>
           {!auth.user ? (
             <button className="btn" onClick={handleClick}>
@@ -111,10 +111,11 @@ const HomePage = () => {
               </i>
             </div>
             <p className="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid
-              perspiciatis libero nobis rem numquam nesciunt alias sapiente
-              minus voluptatem, reiciendis consequuntur optio dolorem!
+              I cant thank MediMate enough for their exceptional service. From
+              the moment I logged on, I felt cared for and supported. The
+              process of finding the right doctor was seamless, and I received
+              top-notch care from start to finish. I highly recommend MediMate
+              to anyone in need of quality healthcare!
             </p>
           </div>
 
@@ -139,10 +140,12 @@ const HomePage = () => {
               </i>
             </div>
             <p className="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid
-              perspiciatis libero nobis rem numquam nesciunt alias sapiente
-              minus voluptatem, reiciendis consequuntur optio dolorem!
+              MediMate has truly changed the game when it comes to accessing
+              medical care. As a busy professional, I dont have time to sift
+              through endless lists of doctors. With MediMate, I was able to
+              input my symptoms and quickly receive recommendations for doctors
+              who specialize in my condition. It is convenient, efficient, and
+              most importantly, it works!
             </p>
           </div>
 
@@ -164,10 +167,11 @@ const HomePage = () => {
               </i>
             </div>
             <p className="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid
-              perspiciatis libero nobis rem numquam nesciunt alias sapiente
-              minus voluptatem, reiciendis consequuntur optio dolorem!
+              I was skeptical at first, but after using MediMate, I am a
+              believer. The platform is incredibly user-friendly, and the
+              recommendations were spot-on.  Thanks to MediMate, I received the care I needed,
+              when I needed it. I will definitely be recommending it to my friends
+              and family!
             </p>
           </div>
         </div>

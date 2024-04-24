@@ -188,7 +188,7 @@ section {
 
 .review .box-container .box .text {
   color: #111;
-  line-height: 1.8;
+  /* line-height: 1.8; */
   font-size: 1.6rem;
   padding-top: 4rem;
 }

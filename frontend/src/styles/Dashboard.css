@@ -91,6 +91,13 @@
   border: 0.5rem solid #fff;
 }
 
+.ar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .dashboard-content .image img {
   height: 40rem;
   border-radius: 50%;

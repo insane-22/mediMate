@@ -47,6 +47,35 @@
   text-transform: none;
   padding: 1rem;
 }
+.row form .box-time {
+  width: 30%;
+  margin: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #16a085;
+  font-size: 1.6rem;
+  color: #444;
+  text-transform: none;
+  padding: 1rem;
+}
+
+.bt {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 0.5rem;
+  padding-left: 1rem;
+  border: 0.2rem solid #16a085;
+  border-radius: 4rem;
+  box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  color: #16a085;
+  cursor: pointer;
+  font-size: 1.7rem;
+  background: #fff;
+}
+
+.bt:hover {
+  background: #16a085;
+  color: #fff;
+}
 
 .row form .btn {
   padding: 1rem 4rem;

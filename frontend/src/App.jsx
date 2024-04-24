@@ -1,9 +1,12 @@
-import Loader from "./components/Loader";
+import DoctorRoute from "./components/Routes/Doctor";
 import PrivateRoute from "./components/Routes/Private";
 import About from "./pages/About";
+import Contribute from "./pages/Contribute";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import DocDashboard from "./pages/doctor/DocDashboard";
+import DocProfile from "./pages/doctor/DocProfile";
 import Dashboard from "./pages/user/Dashboard";
 import Diagnose from "./pages/user/Diagnose";
 import Profile from "./pages/user/Profile";
@@ -17,11 +20,15 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/log" element={<Loader />} />
+      <Route path="/contribute" element={<Contribute />} />
       <Route path="/dashboard" element={<PrivateRoute />}>
         <Route path="user" element={<Dashboard />} />
-        <Route path="user/profile" element={<Profile/>} />
-        <Route path="user/diagnose" element={<Diagnose/>} />
+        <Route path="user/profile" element={<Profile />} />
+        <Route path="user/diagnose" element={<Diagnose />} />
+      </Route>
+      <Route path="/dashboard" element={<DoctorRoute />}>
+        <Route path="doctor" element={<DocDashboard />} />
+        <Route path="doctor/profile" element={<DocProfile />} />
       </Route>
     </Routes>
   );

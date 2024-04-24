@@ -18,19 +18,6 @@ MediMate is your health-friend, here to guide you through your healthcare journe
   - [Prerequisites](#prerequisites)
   - [Configuration](#configuration)
   - [Running a local server](#running-a-local-server)
-- [TYPO3 setup](#typo3-setup)
-  - [Database setup](#database-setup)
-  - [Security](#security)
-- [Page setup](#page-setup)
-  - [Download the Aimeos Page Tree t3d file](#download-the-aimeos-page-tree-t3d-file)
-  - [Go to the Import View](#go-to-the-import-view)
-  - [Upload the page tree file](#upload-the-page-tree-file)
-  - [Go to the import view](#go-to-the-import-view)
-  - [Import the page tree](#import-the-page-tree)
-  - [SEO-friendly URLs](#seo-friendly-urls)
-- [License](#license)
-- [Links](#links)
-
 ## Installation
 
 ### Prerequisites
